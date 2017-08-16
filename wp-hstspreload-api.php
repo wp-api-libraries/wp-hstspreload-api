@@ -1,8 +1,9 @@
 <?php
 /**
- * WP-HSTS-Preload-API (hstspreload.org)
+ * WP-HSTS-Preload-API
  *
- * @package WP-HSTS-Preload-API
+ * @link hstspreload.org API Docs
+ * @package WP-API-Libraries\WP-HSTS-Preload-API
  */
 
 /*
@@ -25,6 +26,8 @@ if ( ! class_exists( 'HSTS_PreloadAPI' ) ) {
 
 	/**
 	 * HSTS_PreloadAPI Class.
+	 *
+	 * @link hstspreload.org API Docs
 	 */
 	class HSTS_PreloadAPI {
 
@@ -39,7 +42,7 @@ if ( ! class_exists( 'HSTS_PreloadAPI' ) ) {
 
 		/**
 		 * __construct function.
-		 * 
+		 *
 		 * @access public
 		 * @return void
 		 */
@@ -70,7 +73,7 @@ if ( ! class_exists( 'HSTS_PreloadAPI' ) ) {
 
 		/**
 		 * Get Domain Status
-		 * 
+		 *
 		 * @access public
 		 * @param mixed $domain Domain.
 		 * @return void
@@ -82,10 +85,10 @@ if ( ! class_exists( 'HSTS_PreloadAPI' ) ) {
 			return $this->fetch( $request );
 
 		}
-		
+
 		/**
 		 * IS Domain Preloadable?
-		 * 
+		 *
 		 * @access public
 		 * @param mixed $domain Domain.
 		 * @return void
