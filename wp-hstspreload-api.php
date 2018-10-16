@@ -58,7 +58,7 @@ if ( ! class_exists( 'HSTS_PreloadAPI' ) ) {
 		 */
 		private function fetch( $request ) {
 
-			$response = wp_remote_get( $request );
+			$response = wp_remote_get( $request , array( 'timeout' => 20 ) );
 			$code = wp_remote_retrieve_response_code( $response );
 
 			if ( 200 !== $code ) {
