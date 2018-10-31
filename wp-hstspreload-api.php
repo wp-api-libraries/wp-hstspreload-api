@@ -18,7 +18,8 @@
 */
 
 /* Exit if accessed directly. */
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; }
 
 
 /* Check if class exists. */
@@ -58,8 +59,8 @@ if ( ! class_exists( 'HSTS_PreloadAPI' ) ) {
 		 */
 		private function fetch( $request ) {
 
-			$response = wp_remote_get( $request , array( 'timeout' => 20 ) );
-			$code = wp_remote_retrieve_response_code( $response );
+			$response = wp_remote_get( $request, array( 'timeout' => 20 ) );
+			$code     = wp_remote_retrieve_response_code( $response );
 
 			if ( 200 !== $code ) {
 				return new WP_Error( 'response-error', sprintf( __( 'Server response code: %d', 'wp-hstspreload-api' ), $code ) );
