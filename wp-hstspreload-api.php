@@ -18,9 +18,7 @@
 */
 
 /* Exit if accessed directly. */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; }
-
+defined( 'ABSPATH' ) || exit;
 
 /* Check if class exists. */
 if ( ! class_exists( 'HSTS_PreloadAPI' ) ) {
